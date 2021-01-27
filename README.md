@@ -21,7 +21,7 @@ import 'paginate-react/dist/index.css'
 class Pagination extends Component {
   constructor() {
     this.state = {
-      totalRecords: 100,
+      totalRecords: 0,
       pageLimit: 30,
       pageNeighbours: 1
     }
