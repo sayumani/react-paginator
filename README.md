@@ -15,12 +15,32 @@ npm install --save react-paginator
 ```tsx
 import React, { Component } from 'react'
 
-import Pagination from 'react-paginator'
+import { Pagination, PageData } from 'react-paginator'
 import 'react-paginator/dist/index.css'
 
 class Pagination extends Component {
+  constructor() {
+    this.state = {
+      totalRecords: 100,
+      pageLimit: 30,
+      pageNeighbours: 1
+    }
+  }
+
+  onPageChanged = (data: PageData) => {
+    const { currentPage, pageLimit } = data
+    // logic to fetch data as per the page goes below
+  }
+
   render() {
-    return <Pagination />
+    return (
+      <Pagination
+        totalRecords={this.state.totalRecords}
+        onPageChanged={this.onPageChanged}
+        pageLimit={this.state.pageLimit}
+        pageNeighbours={this.state.pageNeighbours}
+      />
+    )
   }
 }
 ```

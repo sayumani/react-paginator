@@ -43,30 +43,13 @@ const range = (from: number, to: number, step = 1): any[] => {
 class Pagination extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
-    // let { totalRecords = null, pageLimit = 30, pageNeighbours = 0 } = props
-    // pageLimit = typeof pageLimit === 'number' ? pageLimit : 30
-    // totalRecords = typeof totalRecords === 'number' ? totalRecords : 0
-    // pageNeighbours can be: 0, 1 or 2
-    // pageNeighbours =
-    // typeof pageNeighbours === 'number'
-    // ? Math.max(0, Math.min(pageNeighbours, 2))
-    // : 0
-    // const totalPages = Math.ceil(totalRecords / pageLimit)
-    // const initialState: State = {
-    //   currentPage: 1,
-    //   pageLimit,
-    //   totalRecords,
-    //   pageNeighbours,
-    //   totalPages
-    // }
-    const initialState: State = {
-      currentPage: 0,
+    this.state = {
+      currentPage: 1,
       pageLimit: 30,
       totalRecords: 0,
       pageNeighbours: 0,
-      totalPages: 0
+      totalPages: 1
     }
-    this.state = initialState
   }
 
   componentDidUpdate(prevProps: Props) {
@@ -100,6 +83,7 @@ class Pagination extends Component<Props, State> {
       })
     }
   }
+
   fetchPageNumbers = () => {
     const { totalPages, currentPage, pageNeighbours } = this.state
 
@@ -146,8 +130,8 @@ class Pagination extends Component<Props, State> {
           break
         }
       }
-
-      return [1, ...pages, totalPages]
+      const pageList = new Set([1, ...pages, totalPages])
+      return Array.from(pageList)
     }
     return range(1, totalPages)
   }
