@@ -1,5 +1,5 @@
 {
-  "name": "react-paginator",
+  "name": "paginate-react",
   "version": "1.0.0",
   "description": "paginator component for react application",
   "author": "sayumani",
@@ -61,8 +61,6 @@
     "dist"
   ],
   "dependencies": {
-    "bootstrap": "^4.1.0",
-    "prop-types": "^15.7.2",
-    "react-flags": "^0.1.18"
+    "bootstrap": "^4.1.0"
   }
 }
