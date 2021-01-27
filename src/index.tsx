@@ -11,7 +11,7 @@ interface Props {
 }
 
 // PageData type for pagination data
-interface PageData {
+export interface PageData {
   currentPage: number
   pageLimit: number
   totalRecords: number
@@ -40,7 +40,7 @@ const range = (from: number, to: number, step = 1): any[] => {
   return range
 }
 
-class Pagination extends Component<Props, State> {
+export class Pagination extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -231,5 +231,3 @@ class Pagination extends Component<Props, State> {
     )
   }
 }
-
-export { Pagination, PageData }
