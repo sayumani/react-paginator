@@ -136,10 +136,6 @@ class Pagination extends Component<Props, State> {
     return range(1, totalPages)
   }
 
-  componentDidMount() {
-    this.gotoPage(1)
-  }
-
   gotoPage = (page: number) => {
     const { onPageChanged = (f) => f } = this.props
     const currentPage = Math.max(0, Math.min(page, this.state.totalPages))
