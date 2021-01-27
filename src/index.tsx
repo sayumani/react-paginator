@@ -1,18 +1,24 @@
 import React, { Component, Fragment, MouseEvent } from 'react'
 import bootstrapStyle from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import styles from './styles.module.css'
+
+// Props type for components props
 interface Props {
   totalRecords: number
   pageLimit?: number
   pageNeighbours?: number
-  onPageChanged: (params: PageData) => void
+  onPageChanged?: (params: PageData) => void
 }
 
+// PageData type for pagination data
 interface PageData {
   currentPage: number
   pageLimit: number
   totalRecords: number
   totalPages: number
 }
+
+// State type for component state
 interface State {
   totalRecords: number
   pageLimit: number
@@ -20,6 +26,7 @@ interface State {
   currentPage: number
   totalPages: number
 }
+// constants
 const LEFT_PAGE = 'LEFT'
 const RIGHT_PAGE = 'RIGHT'
 
@@ -32,6 +39,7 @@ const range = (from: number, to: number, step = 1): any[] => {
   }
   return range
 }
+
 class Pagination extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
@@ -185,7 +193,7 @@ class Pagination extends Component<Props, State> {
 
     return (
       <Fragment>
-        <nav aria-label='Pagination'>
+        <nav aria-label='Pagination' className={styles['paginator']}>
           <ul className={bootstrapStyle.pagination}>
             {pages.map((page, index) => {
               if (page === LEFT_PAGE)

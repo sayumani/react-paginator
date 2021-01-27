@@ -1,9 +1,8 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }

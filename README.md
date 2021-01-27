@@ -15,15 +15,22 @@ npm install --save react-paginator
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-paginator'
+import Pagination from 'react-paginator'
 import 'react-paginator/dist/index.css'
 
-class Example extends Component {
+class Pagination extends Component {
   render() {
-    return <MyComponent />
+    return <Pagination />
   }
 }
 ```
+
+The Pagination component can take four special props as specified in the propTypes object.
+
+- onPageChanged is a function called with data of the current pagination state only when the current page changes.
+- totalRecords indicates the total number of records to be paginated. It is required.
+- pageLimit indicates the number of records to be shown per page. If not specified, it defaults to 30
+- pageNeighbours indicates the number of additional page numbers to show on each side of the current page. The minimum value is 0, and the maximum value is 2. If not specified, it defaults to 0 as defined in the constructor().
 
 ## License
 
