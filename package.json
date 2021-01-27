@@ -23,6 +23,14 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },
+  "keywords": [
+    "paginator",
+    "paginate",
+    "react-paginator",
+    "paginator-react",
+    "react-paginate",
+    "paginate-react"
+  ],
   "peerDependencies": {
     "react": "^16.0.0"
   },
