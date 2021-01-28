@@ -186,7 +186,9 @@ export class Pagination extends Component<Props, State> {
                       onClick={this.handleMoveLeft}
                     >
                       <span aria-hidden='true'>&laquo;</span>
-                      <span className='sr-only'>Previous</span>
+                      <span className={bootstrapStyle['sr-only']}>
+                        Previous
+                      </span>
                     </a>
                   </li>
                 )
@@ -201,7 +203,7 @@ export class Pagination extends Component<Props, State> {
                       onClick={this.handleMoveRight}
                     >
                       <span aria-hidden='true'>&raquo;</span>
-                      <span className='sr-only'>Next</span>
+                      <span className={bootstrapStyle['sr-only']}>Next</span>
                     </a>
                   </li>
                 )
