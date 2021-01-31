@@ -2,7 +2,7 @@
 
 > paginator component for react application
 
-[![NPM](https://img.shields.io/npm/v/paginate-react.svg)](https://www.npmjs.com/package/paginate-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/paginate-react.svg)](https://www.npmjs.com/package/paginate-react) [![Build Status](https://travis-ci.com/sayumani/react-paginator.svg?branch=master)](https://travis-ci.com/sayumani/react-paginator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
